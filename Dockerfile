@@ -1,4 +1,4 @@
-FROM node:20-alpine as base
+FROM node:18-alpine as base
 
 ARG PERSONAL_ACCESS_TOKEN
 
@@ -17,7 +17,7 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-FROM node:20-alpine AS release
+FROM node:18-alpine AS release
 
 ENV APP_DIR /usr/local/app
 
