@@ -22,6 +22,8 @@ jobs:
         with:
           cache: npm
           node-version-file: '.nvmrc'
+          # Change the below to your lockfile
+          cache-dependency-path: package.json
 
       - name: ➡️ Set Config
         run: |
@@ -46,6 +48,8 @@ jobs:
         with:
           cache: npm
           node-version-file: '.nvmrc'
+          # Change the below to your lockfile
+          cache-dependency-path: package.json
 
       - name: ➡️ Set Config
         run: |
@@ -70,6 +74,8 @@ jobs:
         with:
           cache: npm
           node-version-file: '.nvmrc'
+          # Change the below to your lockfile
+          cache-dependency-path: package.json
 
       - name: ➡️ Set Config
         run: |
@@ -97,6 +103,8 @@ jobs:
         with:
           cache: npm
           node-version-file: '.nvmrc'
+          # Change the below to your lockfile
+          cache-dependency-path: package.json
 
       - name: 📥 Install deps
         run: npm install
