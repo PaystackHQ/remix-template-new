@@ -1,11 +1,15 @@
-const { rest } = require("msw");
+const { http, HttpResponse } = require("msw");
 const { setupServer } = require("msw/node");
 
 // put one-off handlers that don't really need an entire file to themselves here
 const miscHandlers = [
-  rest.post(`${process.env.REMIX_DEV_HTTP_ORIGIN}/ping`, (req) =>
-    req.passthrough()
-  ),
+  http.get('https://example.com/user', () => {
+    return HttpResponse.json({
+      id: 'c7b3d8e0-5e0b-4b0f-8b3a-3b9f4b3d3b3d',
+      firstName: 'John',
+      lastName: 'Maverick',
+    });
+  }),
 ];
 
 const server = setupServer(...miscHandlers);

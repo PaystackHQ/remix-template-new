@@ -15,6 +15,7 @@ npx create-remix@latest --template PaystackHQ/remix-app-template
 - Unit testing with [Vitest](https://vitest.dev) and [Testing Library](https://testing-library.com)
 - Code formatting with [Prettier](https://prettier.io)
 - Linting with [ESLint](https://eslint.org)
+- Styling with Pax and [TailwindCss](https://tailwindcss.com/)
 - Static Types with [TypeScript](https://typescriptlang.org)
 
 ## Development

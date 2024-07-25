@@ -1,4 +1,3 @@
-import { getCssText } from '@paystackhq/pax';
 import { cssBundleHref } from '@remix-run/css-bundle';
 import type { LinksFunction, LoaderFunctionArgs } from '@remix-run/node';
 import { json } from '@remix-run/node';
@@ -12,7 +11,10 @@ import {
 } from '@remix-run/react';
 import { type ReactNode } from 'react';
 
+import tailwindStyles from './tailwind.css?url';
+
 export const links: LinksFunction = () => [
+  { rel: 'stylesheet', href: tailwindStyles },
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
 ];
 
@@ -28,11 +30,6 @@ const Document = ({ children }: { children: ReactNode }) => {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         <Links />
-        <style
-          id="stitches"
-          dangerouslySetInnerHTML={{ __html: getCssText() }}
-          suppressHydrationWarning
-        />
       </head>
       <body>
         {children}
