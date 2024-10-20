@@ -43,7 +43,7 @@
     "@vitejs/plugin-react": "^4.0.1",
     "@vitest/coverage-v8": "^0.32.2",
     "autoprefixer": "^10.4.19",
-    "cookie": "^0.5.0",
+    "cookie": "^1.0.1",
     "cross-env": "^7.0.3",
     "cypress": "^13.13.1",
     "eslint": "^8.43.0",
